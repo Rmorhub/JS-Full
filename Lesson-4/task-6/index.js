@@ -12,6 +12,6 @@ for (let i = start; i <= end; i += 1) {
   } else if (i % 4 === 0) {
     result *= i;
   } else {
-    continue;
+    // continue; use it 
   }
 }
