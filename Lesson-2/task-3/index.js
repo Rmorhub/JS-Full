@@ -5,6 +5,7 @@ anotherNumber = 77;
 console.log(goodNumber)
 console.log(anotherNumber)
 
+
 const customer = { name: 'John',age: 17 }
 const anotherCustomer = customer;
 anotherCustomer.age = 20;
