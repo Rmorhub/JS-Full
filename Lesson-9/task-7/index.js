@@ -1,9 +1,9 @@
 const getTotalRevenue = (transactions) =>
-  Object.values(transactions)
+  transactions
     .map((values) => Object.values(values))
     .map((amount) => amount[1])
     .reduce((acc, elem) => acc + elem);
-// examples
+
 const dayTransactions = [
   { userId: 22, amount: 60, operation: 'sell' },
   { userId: 22, amount: 160, operation: 'buy' },
