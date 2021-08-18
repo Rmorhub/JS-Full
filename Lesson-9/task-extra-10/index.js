@@ -1,26 +1,14 @@
-/* eslint-disable prefer-object-spread */
-
-/* В решения этой задачи используется метод Object.assign. В реальных проектах для такой задачи
- * лучше использовать spread опертор - это самый современный подход
- *
- * Задачу мы делаем для практики и демонстрационных целей, поэтому чтобы eslint не ругался на эту ошибку,
- * для этой задачи он отключен аннотацией eslint-disable
- * */
-
-function mergeObjectsV1(obj1, obj2) {
-  return Object.assign(obj1, obj2);
-}
-
-function mergeObjectsV2(obj1, obj2) {
-  return Object.assign(obj2, obj1);
-}
-
-function mergeObjectsV3(obj1, obj2) {
-  return { ...obj1, ...obj2 };
-}
-
-function mergeObjectsV4(obj1, obj2) {
-  return { ...obj2, ...obj1 };
+function compareObjects(obj1, obj2) {
+  let firstObj = Object.entries(obj1);
+  console.log(firstObj);
+  let secondObj = Object.entries(obj2);
+  firstObj = firstObj.join();
+  console.log(firstObj);
+  secondObj = secondObj.join();
+  if (firstObj !== secondObj) {
+    return false;
+  }
+  return true;
 }
 
 // examples
@@ -31,10 +19,27 @@ const obj1 = {
 
 const obj2 = {
   name: 'Bob',
+  age: 17,
+};
+
+const obj3 = {
+  name: 'Bob',
+  age: 17,
   student: false,
 };
 
-mergeObjectsV1(obj1, obj2); // ==> { name: 'Bob', age: 17, student: false }
-mergeObjectsV2(obj1, obj2); // ==> { name: 'Tom', age: 17, student: false }
-mergeObjectsV3(obj1, obj2); // ==> { name: 'Bob', age: 17, student: false }
-mergeObjectsV4(obj1, obj2); // ==> { name: 'Tom', age: 17, student: false }
+const obj4 = {
+  name: 'Tom',
+  age: 17,
+};
+
+console.log(compareObjects(obj1, obj2)); // ==> false
+console.log(compareObjects(obj2, obj3)); // ==> false
+console.log(compareObjects(obj1, obj4)); // ==> true
+
+
+
+// const num = [1, 2, [3, 4], 5, 6, 7, [8, 9, [10, 11, [12], 13], 14], 15];
+
+// let numbs = num.join();
+// console.log(numbs);
