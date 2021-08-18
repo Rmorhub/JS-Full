@@ -25,21 +25,20 @@ const contacts = [
   },
 ];
 
-// const sortContacts = (arr, boolean = true) => {
-//   if (!Array.isArray(arr)) {
-//     return null;
-//   }
+const sortContacts = (arr, boolean = true) => {
+  if (!Array.isArray(arr)) {
+    return null;
+  }
 
-//   const result = arr.sort((a, b) => {
-//     if (boolean === true) {
-//       return a.name.localeCompare(b.name);
-//     } else {
-//       return b.name.localeCompare(a.name);
-//     }
-//   });
-//   return result;
-// };
+  const result = arr.sort((a, b) => {
+    if (boolean === true) {
+      return a.name.localeCompare(b.name);
+    }
+    return b.name.localeCompare(a.name);
+  });
+  return result;
+};
 
-// console.log(sortContacts(contacts));
-// console.log(sortContacts(contacts, true));
-// console.log(sortContacts(contacts, false));
+console.log(sortContacts(contacts));
+console.log(sortContacts(contacts, true));
+console.log(sortContacts(contacts, false));
