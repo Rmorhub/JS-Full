@@ -17,3 +17,13 @@
 
 // console.log(withdraw(clients, balances, 'John', 50));
 // console.log(withdraw(clients, balances, 'User', 10));
+
+// export const withdraw = (clients, balances, client, amount) => {
+//   let index = clients.indexOf(client);
+//   if (balances[index] < amount) {
+//     return -1;
+//   } else {
+//     balances[index] = balances[index] - amount;
+//   }
+//   return balances[index];
+// };
