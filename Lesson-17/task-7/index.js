@@ -7,9 +7,9 @@ const user = {
   setFullName(fullName) {
     const nameSurname = fullName.split(' ');
     const name = nameSurname[0];
-    user.firstName = name;
+    this.firstName = name;
     const surname = nameSurname[1];
-    user.lastName = surname;
+    this.lastName = surname;
   },
 };
 
