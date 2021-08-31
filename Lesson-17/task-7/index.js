@@ -4,11 +4,17 @@ const user = {
   getFullName() {
     return `${this.firstName} ${this.lastName}`;
   },
+  // setFullName(fullName) {
+  //   const nameSurname = fullName.split(' ');
+  //   const name = nameSurname[0];
+  //   this.firstName = name;
+  //   const surname = nameSurname[1];
+  //   this.lastName = surname;
+  // },
+
   setFullName(fullName) {
-    const nameSurname = fullName.split(' ');
-    const name = nameSurname[0];
+    const [name, surname] = fullName.split(' ');
     this.firstName = name;
-    const surname = nameSurname[1];
     this.lastName = surname;
   },
 };
