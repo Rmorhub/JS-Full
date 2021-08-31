@@ -13,4 +13,4 @@ export const setTitle = (text) => {
   result.textContent = text;
 };
 
-setTitle('new-title');
+// setTitle('new-title');
