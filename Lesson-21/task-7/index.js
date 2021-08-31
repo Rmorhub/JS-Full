@@ -16,5 +16,4 @@ export const clearList = () => {
   result.innerHTML = '';
 };
 
-clearList();
-
+// clearList();
