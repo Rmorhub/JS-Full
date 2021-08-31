@@ -25,25 +25,25 @@ export const getTitle = () => {
   return result.textContent;
 };
 
-console.log(getTitle());
+// console.log(getTitle());
 
 export const getDesctiption = () => {
   const result = document.querySelector('.about');
   return result.innerText;
 };
 
-console.log(getDesctiption());
+// console.log(getDesctiption());
 
 export const getPlans = () => {
   const result = document.querySelector('.plans');
   return result.innerHTML;
 };
 
-console.log(getPlans());
+// console.log(getPlans());
 
 export const getGoal = () => {
   const result = document.querySelector('.goal');
   return result.outerHTML;
 };
 
-console.log(getGoal());
+// console.log(getGoal());
