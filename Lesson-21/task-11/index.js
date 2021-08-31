@@ -30,7 +30,7 @@
 // element.setAttribute('attribute-name', 'attribute-value')
 // не забыть экспортировать под своими именем
 
-const manageClasses = () => {
+export const manageClasses = () => {
   const addSelected = document.querySelector('.one');
   addSelected.classList.add('selected');
 
