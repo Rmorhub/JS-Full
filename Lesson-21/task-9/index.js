@@ -20,18 +20,22 @@
 
 export const finishList = () => {
   const list = document.querySelector('.list');
-  const first = document.createElement('li');
-  const four = document.createElement('li');
-  const six = document.createElement('li');
-  const eight = document.createElement('li');
   const special = document.querySelector('.special');
+
+  const first = document.createElement('li');
   first.textContent = 1;
-  four.textContent = 4;
-  six.textContent = 6;
-  eight.textContent = 8;
   list.prepend(first);
+
+  const four = document.createElement('li');
+  four.textContent = 4;
   special.before(four);
+
+  const six = document.createElement('li');
+  six.textContent = 6;
   special.after(six);
+  
+  const eight = document.createElement('li');
+  eight.textContent = 8;
   list.append(eight);
 };
 
