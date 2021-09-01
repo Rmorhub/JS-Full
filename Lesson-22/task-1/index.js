@@ -41,6 +41,8 @@ const attachSquare = () => {
   spanElem.addEventListener('click', logGreenSpan);
 };
 
+attachSquare();
+
 attachBtn.addEventListener('click', attachSquare);
 
 // =========================removeBtn===============================
