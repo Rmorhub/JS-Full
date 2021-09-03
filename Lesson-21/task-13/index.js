@@ -62,9 +62,14 @@
 // ==
 // чтобы найти нужный эл по дата атрибуту , `span[data-number="${num}"]`
 
-export const getSection = num => {
-  const element = document.querySelector(`span[data-number="${num}"]`);
-  return element.closest('.box').getAttribute('data-section');
-};
+// export const getSection = num => {
+//   const element = document.querySelector(`span[data-number="${num}"]`);
+//   return element.closest('.box').getAttribute('data-section');
+// };
+
+// console.log(getSection(5));
+
+const getSection = num =>
+  document.querySelector(`span[data-number="${num}"]`).closest('.box').getAttribute('data-section');
 
 // console.log(getSection(5));
