@@ -55,7 +55,10 @@ button.addEventListener('click', inputEvent);
 // ==========================================================================
 
 const checkBoxChecked = event => {
-
+  const isCheckbox = event.target.classList.contains('list__item-checkbox');
+  if (!isCheckbox) {
+    return;
+  }
   const taskId = event.target.dataset.id;
   const tasksElem = tasks.find(el => el.id === taskId);
 
@@ -68,4 +71,4 @@ const checkBoxChecked = event => {
   renderTasks(tasks);
 };
 
-listElem.addEventListener('change', checkBoxChecked);
+listElem.addEventListener('click', checkBoxChecked);
