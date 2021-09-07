@@ -9,8 +9,7 @@ export const getDiff = (startDate, endDate) => {
   const hours = new Date(diff).getUTCHours();
   const minutes = new Date(diff).getMinutes();
   const seconds = new Date(diff).getSeconds();
-  const res = `${Math.floor(days)}d ${hours}h ${minutes}m ${seconds}s`;
-  return res;
+  return `${Math.floor(days)}d ${hours}h ${minutes}m ${seconds}s`;
 };
 
 const firstDate = new Date(2020, 10, 0, 2, 10, 40);
