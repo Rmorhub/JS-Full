@@ -1,19 +1,20 @@
 export const getDiff = (startDate, endDate) => {
-  const diff = startDate - endDate;
-  const days = diff / 86400000;
+  let days = null;
   let hours = null;
   let minutes = null;
   let seconds = null;
   if (startDate > endDate) {
+    days = (startDate - endDate) / 86400000;
     hours = new Date(startDate - endDate).getUTCHours();
     minutes = new Date(startDate - endDate).getMinutes();
     seconds = new Date(startDate - endDate).getSeconds();
   } else {
+    days = (endDate - startDate) / 86400000;
     hours = new Date(endDate - startDate).getUTCHours();
     minutes = new Date(endDate - startDate).getMinutes();
     seconds = new Date(endDate - startDate).getSeconds();
   }
-  const res = `${Math.abs(Math.floor(days))}d ${hours}h ${minutes}m ${seconds}s`;
+  const res = `${Math.floor(days)}d ${hours}h ${minutes}m ${seconds}s`;
   return res;
 };
 
