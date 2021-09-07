@@ -1,10 +1,11 @@
 const getDiff = (startDate, endDate) => {
-  let diff = null;
-  if (startDate > endDate) {
-    diff = startDate - endDate;
-  } else {
-    diff = endDate - startDate;
-  }
+  // let diff = null;
+  // if (startDate > endDate) {
+  //   diff = startDate - endDate;
+  // } else {
+  //   diff = endDate - startDate;
+  // }
+  const diff = startDate > endDate ? startDate - endDate : endDate - startDate;
   const dayInMs = 86400000;
   const days = diff / dayInMs;
   const hours = new Date(diff).getUTCHours();
