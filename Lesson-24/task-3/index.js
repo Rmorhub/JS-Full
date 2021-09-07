@@ -1,17 +1,17 @@
 export const getDiff = (startDate, endDate) => {
   const diff = startDate - endDate;
   const days = diff / 86400000;
-  const hours = new Date(diff).getHours() - 3;
-  const minutes = new Date(diff).getMinutes();
-  const seconds = new Date(diff).getSeconds();
+  const hours = new Date(startDate - endDate).getUTCHours();
+  const minutes = new Date(startDate - endDate).getMinutes();
+  const seconds = new Date(startDate - endDate).getSeconds();
 
-  const res = `${Math.floor(days)}d ${hours}h ${minutes}m ${seconds}s`;
+  const res = `${Math.abs(Math.floor(days))}d ${hours}h ${minutes}m ${seconds}s`;
   return res;
 };
 
 const firstDate = new Date(2020, 10, 2, 1, 10, 40);
 console.log(firstDate);
-const secondDate = new Date(2020, 0, 1, 0, 0, 0);
+const secondDate = new Date(2020, 10, 2, 1, 9, 41);
 console.log(secondDate);
 
 const thirdtDate = new Date(2018, 0, 1, 0, 0, 0);
