@@ -1,11 +1,12 @@
-export const getDiff = (startDate, endDate) => {
+const getDiff = (startDate, endDate) => {
   let diff = null;
   if (startDate > endDate) {
     diff = startDate - endDate;
   } else {
     diff = endDate - startDate;
   }
-  const days = diff / 86400000;
+  const dayInMs = 86400000;
+  const days = diff / dayInMs;
   const hours = new Date(diff).getUTCHours();
   const minutes = new Date(diff).getMinutes();
   const seconds = new Date(diff).getSeconds();
@@ -18,7 +19,7 @@ const secondDate = new Date(2020, 10, 2, 1, 9, 41);
 console.log(secondDate);
 
 const thirdtDate = new Date(2020, 0, 1, 0, 0, 0);
-const fourthDate = new Date(2020, 1, 3, 0, 0, 0);
+const fourthDate = new Date(2010, 1, 3, 0, 0, 0);
 
 console.log(getDiff(firstDate, secondDate));
 console.log(getDiff(thirdtDate, fourthDate));
