@@ -5,18 +5,20 @@
 
 // eslint-disable-next-line arrow-body-style
 export const getLocalStorageData = () => {
+  // eslint-disable-next-line arrow-body-style
   return Object.entries(localStorage).reduce((acc, [key, value]) => {
-    let newValue;
-    try {
-      newValue = JSON.stringify(value);
-    } catch (e) {
-      newValue = value;
-    }
     return {
       ...acc,
-      [key]: newValue,
+      [key]: value,
     };
   }, {});
 };
 
 console.log(getLocalStorageData());
+
+// let newValue;
+// try {
+//   newValue = JSON.stringify(value);
+// } catch (e) {
+//   newValue = value;
+// }
