@@ -1,7 +1,7 @@
-localStorage.clear();
-localStorage.setItem('hobbies', JSON.stringify({ name: 'Tom' }));
+// localStorage.clear();
+// localStorage.setItem('hobbies', JSON.stringify({ name: 'Tom' }));
 // localStorage.setItem('name', 'Tom');
-localStorage.setItem('age', JSON.stringify(17));
+// localStorage.setItem('age', JSON.stringify(17));
 
 // eslint-disable-next-line arrow-body-style
 export const getLocalStorageData = () => {
@@ -14,7 +14,7 @@ export const getLocalStorageData = () => {
   }, {});
 };
 
-console.log(getLocalStorageData());
+// console.log(getLocalStorageData());
 
 // let newValue;
 // try {
