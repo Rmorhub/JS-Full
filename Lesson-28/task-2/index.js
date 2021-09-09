@@ -1,4 +1,4 @@
-const favorites = ['id-2', 'id-6'];
+const favorites = ['id-2'];
 const tree = {
   id: 'id-1',
   name: 'Products',
@@ -6,15 +6,8 @@ const tree = {
     {
       id: 'id-2',
       name: 'Food',
-      nodes: [
-        {
-          id: 'id-6',
-          name: 'Drinks',
-          nodes: [],
-        },
-      ],
+      nodes: [],
     },
-    { id: 'id-17', name: 'Venihle', nodes: [] },
   ],
 };
 
