@@ -1,5 +1,5 @@
-const imgSrc =
-  'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg';
+// const imgSrc =
+//   'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg';
 
 export const addImage = (img, callback) => {
   const imgElem = document.createElement('img');
@@ -19,7 +19,7 @@ export const addImage = (img, callback) => {
 };
 
 // callack function
-export const onImageLoaded = (error, imgElem) => {
+const onImageLoaded = (error, imgElem) => {
   if (error) {
     console.log(error);
     return;
