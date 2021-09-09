@@ -4,14 +4,14 @@
 export const addImage = (img, callback) => {
   const imgElem = document.createElement('img');
 
-  imgElem.setAttribute('alt', 'tree');
+  imgElem.setAttribute('alt', 'My photo');
   imgElem.src = img;
   const containerElem = document.querySelector('.page');
   containerElem.append(imgElem);
 
   const onImageLoaded = () => {
-    const { width, height } = imgElem;
-    callback(null, { width, height });
+    // const { width, height } = imgElem;
+    callback(null, imgElem);
   };
 
   imgElem.addEventListener('load', onImageLoaded);
