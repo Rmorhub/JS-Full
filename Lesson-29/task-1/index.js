@@ -19,7 +19,7 @@ export const addImage = (img, callback) => {
 };
 
 // callack function
-export const onImageLoaded = (error, imgElem) => {
+const onImageLoaded = (error, imgElem) => {
   if (error) {
     console.log(error);
     return;
@@ -32,7 +32,7 @@ export const onImageLoaded = (error, imgElem) => {
 };
 
 // examples
-addImage(imgSrc, onImageLoaded);
+// addImage(imgSrc, onImageLoaded);
 
 // broken address for check
 // addImage(
