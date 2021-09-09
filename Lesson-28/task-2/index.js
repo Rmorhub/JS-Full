@@ -18,7 +18,7 @@ const tree = {
   ],
 };
 
-const markFavorites = (obj, favorite) => {
+export const markFavorites = (obj, favorite) => {
   const isFavourite = favorite.includes(obj.id);
 
   return {
