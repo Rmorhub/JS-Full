@@ -11,13 +11,13 @@ const tree = {
   ],
 };
 
-export const markFavorites = (tree, favorites) => {
-  const isFavourite = favorites.includes(tree.id);
+export const markFavorites = (obj, favorite) => {
+  const isFavorite = favorite.includes(obj.id);
 
   return {
-    ...tree,
-    isFavourite,
-    nodes: tree.nodes.map(childNode => markFavorites(childNode, favorites)),
+    ...obj,
+    isFavorite,
+    nodes: obj.nodes.map(childNode => markFavorites(childNode, favorite)),
   };
 };
 
