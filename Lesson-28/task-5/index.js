@@ -1,4 +1,4 @@
-const shmoment = date => {
+export const shmoment = date => {
   const result = date;
   console.log(date)
 
