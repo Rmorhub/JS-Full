@@ -1,4 +1,4 @@
-const addImage = (imgSrc, callback) => {
+export const addImage = (imgSrc, callback) => {
   const imgElem = document.createElement('img');
   imgElem.setAttribute('alt', 'tree');
   imgElem.src = imgSrc;
@@ -11,7 +11,7 @@ const addImage = (imgSrc, callback) => {
   };
 
   imgElem.addEventListener('load', onImageLoaded);
-  imgElem.addEventListener('error', () => callback('Image loaded failed'));
+  imgElem.addEventListener('error', () => callback('Image load is failed'));
 };
 
 // callack function
@@ -33,9 +33,11 @@ addImage(
   onImageLoaded,
 );
 
+
+// broken address for check
 // addImage(
 //   'https://p.bgstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg',
 //   onImageLoaded,
-// ); // broken address for check
+// ); 
 
 
