@@ -1,6 +1,6 @@
-const shmoment = arg => {
-  const result = arg;
-  console.log(arg);
+const shmoment = date => {
+  const result = date;
+  console.log(date)
 
   const dateChanges = {
     add(text, number) {
