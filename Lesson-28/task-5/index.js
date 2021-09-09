@@ -1,6 +1,6 @@
 export const shmoment = date => {
-  const result = date;
-  console.log(date)
+  const coppiedDate = new Date(date)
+  const result = coppiedDate;
 
   const dateChanges = {
     add(text, number) {
@@ -30,12 +30,9 @@ export const shmoment = date => {
   };
   return dateChanges;
 };
-
-const result = shmoment(new Date(2020, 0, 7, 17, 17, 17))
-  .add('minutes', 2)
-  .add('days', 8)
-  .subtract('years', 1)
-  .result();
+const someDate = new Date(2020, 0, 7, 17, 17, 17);
+const result = shmoment(someDate).add('minutes', 2).add('days', 8).subtract('years', 1).result();
 // ... Jan 15 2019 17:19:17 ...
 
+console.log(someDate);
 console.log(result);
