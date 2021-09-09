@@ -1,11 +1,11 @@
 // const imgSrc =
 //   'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg';
 
-export const addImage = (img, callback) => {
+export const addImage = (imgSrc, callback) => {
   const imgElem = document.createElement('img');
 
   imgElem.setAttribute('alt', 'tree');
-  imgElem.src = img;
+  imgElem.src = imgSrc;
   const containerElem = document.querySelector('.page');
   containerElem.append(imgElem);
 
