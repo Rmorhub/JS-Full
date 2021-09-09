@@ -1,6 +1,5 @@
-export const shmoment = date => {
-  const coppiedDate = new Date(date)
-  const result = coppiedDate;
+const shmoment = date => {
+  const result = new Date(date);
 
   const dateChanges = {
     add(text, number) {
