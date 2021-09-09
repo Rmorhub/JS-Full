@@ -6,17 +6,17 @@
 export const printing = () => {
   console.log(1);
 
-  setTimeout(function () {
+  setTimeout(() => {
     console.log(5);
   }, 1000);
 
   console.log(2);
 
-  setTimeout(function () {
+  setTimeout(() => {
     console.log(4);
   }, 0);
 
-  setTimeout(function () {
+  setTimeout(() => {
     console.log(6);
   }, 2000);
 
