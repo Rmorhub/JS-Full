@@ -23,6 +23,3 @@ export const asyncCalculator = numbr =>
 
 // asyncCalculator(5);
 
-// requestUserData('userid777').then(user => console.log(user));
-
-// requestUserData('broken').catch(error => console.log(error));
