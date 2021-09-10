@@ -20,6 +20,7 @@ console.log(successPromise);
  * чтобы в консоль вывелся квадрат числа, которое резолвиться из successPromise
  */
 
+// eslint-disable-next-line prefer-arrow-callback
 successPromise.then(function onSuccess(number) {
   const squareNumber = number * number
   console.log(squareNumber);
@@ -30,6 +31,7 @@ successPromise.then(function onSuccess(number) {
  * текст вывелся в консоль?
  * подумайте почему
  */
+// eslint-disable-next-line prefer-arrow-callback
 successPromise.catch(function onError() {
   console.log('I am an error')
 });
