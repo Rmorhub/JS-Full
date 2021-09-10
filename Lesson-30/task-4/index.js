@@ -14,6 +14,6 @@ console.log(typeof failedPromise)
  * выведите в консоль ошибку в ф-ции onError
  */
 
-failedPromise.catch(function onError(error) {
+failedPromise.catch((error) => {
   console.log(error)
 });
