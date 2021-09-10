@@ -12,7 +12,7 @@ console.log(typeof failedPromise)
 
 /*
  * выведите в консоль ошибку в ф-ции onError
- */
+v */
 
 failedPromise.catch((error) => {
   console.log(error)
