@@ -21,7 +21,7 @@ export const asyncCalculator = numbr =>
         }),
     );
 
-asyncCalculator(5);
+// asyncCalculator(5);
 
 // requestUserData('userid777').then(user => console.log(user));
 
