@@ -1,50 +1,42 @@
-// example
-// const addImage = (url, callback) => {
-//   const img = document.createElement('img');
-//   img.setAttribute('alt', 'User avatar');
-//   img.src = url;
+/* здесь мы создаем промис, который резолвит объект { name: 'Tom', age: 17 } через 1 секунду */
+const userDataPromise = new Promise(resolve => {
+  setTimeout(() => {
+    resolve({ name: 'Tom', age: 17 });
+  }, 1000);
+});
 
-//   const pageElem = document.querySelector('.page');
-//   pageElem.append(img);
+/*
+ * Выведите в консоль переменную userDataPromise
+ * Ответьте себе на вопрос, какой тип данных имеет переменная userDataPromise?
+ */
+console.log(typeof userDataPromise);
+console.log(userDataPromise);
+// Объект , имеющий свой набор протипов catch(для отлавливания ошибок),
+// then(подписка на успешное выполнения действия промиса), finally(для двух вариантов)
+// отображающий статус pending --->  fulfilled / rejected
+// результатом которого является объект
 
-//   const onImageLoaded = () => {
-//     const { width, height } = img;
-//     callback(null, { width, height });
-//   };
+/*
+ * Выведите в консоль переменную userData в обработчике промиса
+ * Ответьте себе на вопрос, что находится в переменной userData?
+ */
 
-//   const onImageLoadError = () => callback('Image load failed');
+// eslint-disable-next-line prefer-arrow-callback
+userDataPromise.then(function onSuccess(userData) {
+  console.log(userData);
+});
 
-//   img.addEventListener('load', onImageLoaded);
+// fulfilled результат успешного выполнения действий промиса 
 
-//   img.addEventListener('error', onImageLoadError);
-// };
+/*
+ * подпишитесь на успешное выполнение промиса userDataPromise
+ * используйте метод .then
+ * в обработчике промиса (ф-ция внутри .then() ) выведите в консоль строку 'My name is Tom. I am 17 years old'
+ * Tom и 17 достаньте с данных, которые приходят в ф-цию onSuccess
+ */
 
-export const addImageV2 = url => {
-  const p = new Promise((resolve, reject) => {
-    const img = document.createElement('img');
-    img.setAttribute('alt', 'User avatar');
-    img.src = url;
-
-    const pageElem = document.querySelector('.page');
-    pageElem.append(img);
-
-    const onImageLoaded = () => {
-      const { width, height } = img;
-      resolve({ width, height });
-    };
-
-    const onImageLoadError = () => reject(new Error('Image load failed'));
-
-    img.addEventListener('load', onImageLoaded);
-
-    img.addEventListener('error', onImageLoadError);
-  });
-
-  return p;
-};
-
-// examples
-
-// addImageV2('https://server.com/image.png')
-//   .then(data => console.log(data)) // ==> { width: 200, height: 100 }
-//   .catch(error => console.log(error)); // ==> 'Image load failed'
+// eslint-disable-next-line prefer-arrow-callback
+userDataPromise.then(function onSuccess(userData) {
+  const {name, age} = userData
+  console.log(`My name is ${name}. I am ${age} years old`);
+});
