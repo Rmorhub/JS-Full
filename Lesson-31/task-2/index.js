@@ -15,13 +15,9 @@ export const asyncCalculator = numbr =>
           }, 500);
         }),
     )
-    .then(
-      value =>
-        new Promise(() => {
-          const result = value * 2;
-          console.log(`Doubled value: ${result}`);
-        }),
-    );
+    .then(value => {
+      console.log(`Doubled value: ${value * 2}`);
+      return value * 2;
+    });
 
 // asyncCalculator(5);
-
