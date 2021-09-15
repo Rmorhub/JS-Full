@@ -16,7 +16,7 @@ const filledInputForm = event => {
   newCreatedUser.email = emailText;
 
   const userText = userNameInput.value;
-  newCreatedUser.userName = userText;
+  newCreatedUser.name = userText;
 
   const passwordText = passwordInput.value;
   newCreatedUser.password = passwordText;
