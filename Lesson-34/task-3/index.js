@@ -56,9 +56,9 @@ const sumbitCreatedUser = event => {
     getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
   });
 
-  emailInput.value = '';
-  userNameInput.value = '';
-  passwordInput.value = '';
+  // emailInput.value = '';
+  // userNameInput.value = '';
+  // passwordInput.value = '';
 };
 
 loginForm.addEventListener('submit', sumbitCreatedUser);
