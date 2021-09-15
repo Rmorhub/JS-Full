@@ -42,12 +42,12 @@ const createUser = usersData =>
 
 // =======================================================================================
 
-function getUsers() {
-  return fetch(baseUrl).then(response => response.json());
-}
+// function getUsers() {
+//   return fetch(baseUrl).then(response => response.json());
+// }
 
-function getUsersById(userId) {
-  return fetch(`${baseUrl}/${userId}`).then(response => response.json());
+// function getUsersById(userId) {
+//   return fetch(`${baseUrl}/${userId}`).then(response => response.json());
 }
 
 // =======================================================================================
@@ -55,9 +55,9 @@ const sumbitCreatedUser = event => {
   event.preventDefault();
   createUser(newCreatedUser);
 
-  getUsers().then(user => {
-    getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
-  });
+  // getUsers().then(user => {
+  //   getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
+  // });
 
   emailInput.value = '';
   userNameInput.value = '';
