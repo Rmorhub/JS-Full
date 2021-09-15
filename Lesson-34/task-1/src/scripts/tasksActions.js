@@ -50,29 +50,10 @@ export const onTaskClick = event => {
         renderTasks();
       });
   }
-  // const taskId = event.target.dataset.id;
-  // console.log(taskId);
-  // const { text, createDate } = tasksList.find(task => task.id === taskId);
-  // const done = event.target.checked;
-  // const updatedTask = {
-  //   text,
-  //   createDate,
-  //   done,
-  //   finishDate: done ? new Date().toISOString() : null,
-  // };
-  // updateTask(taskId, updatedTask)
-  //   .then(() => getTasksList())
-  //   .then(newTasksList => {
-  //     setItem('tasksList', newTasksList);
-  //     renderTasks();
-  //   });
 
   const isdeleteBtn = event.target.classList.contains('list-item__delete-btn');
+  
   if (isdeleteBtn) {
-    const closestTaskId = event.target.closest('list-item__checkbox')
-    console.log(closestTaskId);
-    console.log(taskId);
-
     deleteTask(taskId)
       .then(() => getTasksList())
       .then(newTasksList => {
@@ -87,19 +68,3 @@ export const onTaskClick = event => {
 // 3. read new data from server
 // 4. save new data to front-end storage
 // 5. update UI based on new data
-
-// export const deleteTask = event => {
-//   const isdeleteBtn = event.target.classList.contains('list-item__delete-btn');
-//   if (!isdeleteBtn) {
-//     return;
-//   }
-
-//   const taskId = event.target.dataset.id;
-
-//   deleteTask(taskId)
-//     .then(() => getTasksList())
-//     .then(newTasksList => {
-//       setItem('tasksList', newTasksList);
-//       renderTasks();
-//     });
-// };
