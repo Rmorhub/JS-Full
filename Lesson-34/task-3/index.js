@@ -43,10 +43,14 @@ const createUser = taskData =>
 const sumbitCreatedUser = event => {
   event.preventDefault();
   createUser(newCreatedUser);
+
+  emailInput.value = '';
+  userNameInput.value = '';
+  passwordInput.value = '';
 };
 
 loginForm.addEventListener('submit', sumbitCreatedUser);
-console.log(emailInput.innerHTML = '');
+
 // ================================================================================
 
 // test
