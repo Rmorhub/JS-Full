@@ -13,7 +13,7 @@ export function createUser(userData) {
   return fetch(baseUrl, {
     method: 'POST',
     headers: {
-      'Content-type': 'application/json;charset=utf-8',
+      'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify(userData),
   });
@@ -29,7 +29,7 @@ export function updateUser(userId, userData) {
   return fetch(`${baseUrl}/${userId}`, {
     method: 'PUT',
     headers: {
-      'Content-type': 'application/json;charset=utf-8',
+      'Content-Type': 'application/json;charset=utf-8',
     },
     body: JSON.stringify(userData),
   });
@@ -55,17 +55,17 @@ const newUserData = {
 //   console.log('User created');
 // });
 
-const updatedUserData = {
-  email: 'new@email.com',
-  firstName: 'John',
-  lastName: 'Doe',
-  age: 17,
-};
+// const updatedUserData = {
+//   email: 'new@email.com',
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   age: 17,
+// };
 
-// updateUser('11', updatedUserData).then(() => {
+// updateUser('2', updatedUserData).then(() => {
 //   console.log('User updated');
 // });
 
-// deleteUser('3').then(() => {
-//   console.log('User deleted');
+// deleteUser('2').then(() => {
+//   console.log('User updated');
 // });
