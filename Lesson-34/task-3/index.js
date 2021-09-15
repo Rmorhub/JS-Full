@@ -31,13 +31,13 @@ loginForm.addEventListener('input', filledInputForm);
 
 // ==============================================================================
 
-const createUser = taskData =>
-  fetch(baseUrl, {
+const createUser = userData =>
+  fetch('https://6140a15a357db50017b3d77d.mockapi.io/api/v1/users', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
     },
-    body: JSON.stringify(taskData),
+    body: JSON.stringify(userData),
   });
 
 // =======================================================================================
