@@ -65,9 +65,6 @@ const sumbitCreatedUser = event => {
     passwordInput.value = '';
   }
 
-  // emailInput.value = '';
-  // userNameInput.value = '';
-  // passwordInput.value = '';
 };
 
 loginForm.addEventListener('submit', sumbitCreatedUser);
