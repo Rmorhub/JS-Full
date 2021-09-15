@@ -53,18 +53,20 @@ function getUsersById(userId) {
 // =======================================================================================
 const sumbitCreatedUser = event => {
   event.preventDefault();
-  createUser(newCreatedUser);
 
-  if (
-    getUsers().then(user => {
-      getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
-    })
-  ) {
-    emailInput.value = '';
-    userNameInput.value = '';
-    passwordInput.value = '';
-  }
+  const promise = new Promise((resolve, reject) => {
+    createUser(newCreatedUser);
 
+    resolve(
+      getUsers().then(user => {
+        getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
+      }),
+      (emailInput.value = ''),
+      (userNameInput.value = ''),
+      (passwordInput.value = ''),
+    );
+  });
+  return promise;
 };
 
 loginForm.addEventListener('submit', sumbitCreatedUser);
