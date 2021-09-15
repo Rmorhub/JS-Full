@@ -48,7 +48,7 @@ const createUser = usersData =>
 
 // function getUsersById(userId) {
 //   return fetch(`${baseUrl}/${userId}`).then(response => response.json());
-}
+// }
 
 // =======================================================================================
 const sumbitCreatedUser = event => {
