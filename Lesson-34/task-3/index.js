@@ -7,7 +7,7 @@ const loginForm = document.querySelector('.login-form');
 // ===========================================================
 const newCreatedUser = {
   email: null,
-  userName: null,
+  name: null,
   password: null,
 };
 // ============================================================
