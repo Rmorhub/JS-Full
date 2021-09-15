@@ -28,7 +28,14 @@ const filledInputForm = event => {
   console.log(newCreatedUser);
 };
 loginForm.addEventListener('input', filledInputForm);
+// ==============================================================================
+function getUsers() {
+  return fetch(baseUrl).then(response => response.json());
+}
 
+function getUsersById(userId) {
+  return fetch(`${baseUrl}/${userId}`).then(response => response.json());
+}
 // ==============================================================================
 
 const createUser = usersData =>
@@ -39,16 +46,6 @@ const createUser = usersData =>
     },
     body: JSON.stringify(usersData),
   });
-
-// =======================================================================================
-
-function getUsers() {
-  return fetch(baseUrl).then(response => response.json());
-}
-
-function getUsersById(userId) {
-  return fetch(`${baseUrl}/${userId}`).then(response => response.json());
-}
 
 // =======================================================================================
 const sumbitCreatedUser = event => {
