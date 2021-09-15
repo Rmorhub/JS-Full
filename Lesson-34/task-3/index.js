@@ -40,9 +40,24 @@ const createUser = taskData =>
     body: JSON.stringify(taskData),
   });
 
+// =======================================================================================
+
+function getUsers() {
+  return fetch(baseUrl).then(response => response.json());
+}
+
+function getUsersById(userId) {
+  return fetch(`${baseUrl}/${userId}`).then(response => response.json());
+}
+
+// =======================================================================================
 const sumbitCreatedUser = event => {
   event.preventDefault();
   createUser(newCreatedUser);
+
+  getUsers().then(user => {
+    getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
+  });
 
   emailInput.value = '';
   userNameInput.value = '';
@@ -53,11 +68,15 @@ loginForm.addEventListener('submit', sumbitCreatedUser);
 
 // ================================================================================
 
-// test
-function getUsersList() {
-  return fetch(baseUrl).then(response => response.json());
-}
+// test ============================================================================
+// function getUsersList() {
+//   return fetch(baseUrl).then(response => response.json());
+// }
 
-getUsersList().then(users => {
-  console.log(users);
-});
+// getUsersList().then(users => {
+//   console.log(users);
+// });
+
+// function getUsersByEmail(email) {
+//   return fetch(`${baseUrl}/${email}`).then(response => response.json());
+// }
