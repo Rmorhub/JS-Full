@@ -53,7 +53,7 @@ const sumbitCreatedUser = event => {
   createUser(newCreatedUser)
     .then(() => getUsers())
     .then(user => {
-      getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
+      getUsersById(user.length).then(users => alert(JSON.stringify(users)));
     })
     .then(() => {
       emailInput.value = '';
