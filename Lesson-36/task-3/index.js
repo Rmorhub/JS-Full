@@ -2,9 +2,8 @@ const fetchUserData = userName =>
   fetch(`https://api.github.com/users/${userName}`).then(response => response.json());
 
 export const getUsersBlogs = async userName => {
-  const usersArray = userName;
   try {
-    return await Promise.all(usersArray.map(user => fetchUserData(user).then(users => users.blog)));
+    return await Promise.all(userName.map(user => fetchUserData(user).then(users => users.blog)));
   } catch (error) {
     throw new Error('Failed to fetch user');
   }
