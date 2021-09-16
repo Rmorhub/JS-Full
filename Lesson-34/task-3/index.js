@@ -62,14 +62,6 @@ const sumbitCreatedUser = event => {
     })
     // eslint-disable-next-line no-return-assign
     .catch(() => (errorElem.textContent = 'Failed to create user'));
-
-  // getUsers().then(user => {
-  //   getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
-  // });
-
-  // emailInput.value = '';
-  // userNameInput.value = '';
-  // passwordInput.value = '';
 };
 
 loginForm.addEventListener('submit', sumbitCreatedUser);
