@@ -50,11 +50,20 @@ const createUser = usersData =>
 // =======================================================================================
 const sumbitCreatedUser = event => {
   event.preventDefault();
-  createUser(newCreatedUser);
+  createUser(newCreatedUser)
+    .then(() => getUsers())
+    .then(user => {
+      getUsersById(user.length).then(users => alert(JSON.stringify(users)));
+    })
+    .then(() => {
+      emailInput.value = '';
+      userNameInput.value = '';
+      passwordInput.value = '';
+    });
 
-  getUsers().then(user => {
-    getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
-  });
+  // getUsers().then(user => {
+  //   getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
+  // });
 
   // emailInput.value = '';
   // userNameInput.value = '';
