@@ -53,13 +53,15 @@ const sumbitCreatedUser = event => {
   createUser(newCreatedUser)
     .then(() => getUsers())
     .then(user => {
-      getUsersById(user.length).then(users => alert(JSON.stringify(users)));
+      getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
     })
     .then(() => {
       emailInput.value = '';
       userNameInput.value = '';
       passwordInput.value = '';
-    });
+    })
+    // eslint-disable-next-line no-return-assign
+    .catch(() => (errorElem.textContent = 'Failed to create user'));
 
   // getUsers().then(user => {
   //   getUsersById(user.length + 1).then(users => alert(JSON.stringify(users)));
